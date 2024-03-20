@@ -21,9 +21,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "white",
     flexDirection: "row",
-    height: 60,
+    height: 40,
     justifyContent: "space-around",
     alignItems: "center",
+    borderRadius: 5
   },
  
 });

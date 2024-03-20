@@ -1,12 +1,16 @@
 // SearchBar.js
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-
+import { AntDesign } from '@expo/vector-icons';
 export default function NameBar({}){
   return (
     <View style={styles.container}>
       <Text style={styles.text}> Cyber Punk 2077</Text>
-    </View>
+      <View style={{marginRight: 40}}>
+      <AntDesign name="down" size={20} color="white"  />
+      </View>
+    </View>          
+    
   );
 };
 
@@ -18,14 +22,15 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "center",
     flexDirection: "row",
-    width: "60%",
+  
     
   },
   text:{
     fontSize: 20,
     fontWeight: "bold",
     color: "white",
-    marginHorizontal: 40,
-  }
-  
+    marginLeft: 50,
+    padding: 5
+  },
+
 });

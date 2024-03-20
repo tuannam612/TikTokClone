@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import { Text, StyleSheet, Pressable } from "react-native";
 
 export default function FollowButton() {
-    const [title, setTitle] = useState('Follow');
+    const [title, setTitle] = useState('Add Friends');
     const [followStatus, setFollowStatus] = useState(false)
     function handlePress() {
         if (followStatus === false) {
             setFollowStatus(true)
-            setTitle('Followed')
+            setTitle('Friend')
         }
         else {
             setFollowStatus(false)
-            setTitle('Follow')
+            setTitle('Add Friends')
         }
     }
     return (

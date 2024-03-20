@@ -11,8 +11,8 @@ import NameBar from "../components/NameBar";
 import StatBlock from "../components/StatusBlock";
 import Button from "../components/Button";
 import FollowButton from "../components/FollowButton";
-import { MaterialIcons } from '@expo/vector-icons';
 import ProfileItems from "../components/ProfileItems";
+import { AntDesign ,Feather,MaterialIcons } from '@expo/vector-icons';
 export default function App() {
   
   return (
@@ -22,10 +22,11 @@ export default function App() {
               <MaterialIcons name="report" size={24} color='white' />
               </View>
         <NameBar></NameBar>
-        <Image
-          style={styles.settingImg}
-          source={require("../assets/setting.png")}
-        ></Image>
+
+        <View style={styles.menuHeading}>
+        <Feather name="menu" size={24} color="white" />
+        </View>
+      
       </View>
 
       <View style={styles.infoContainer}>
@@ -33,10 +34,9 @@ export default function App() {
           style={styles.avatar}
           source={require("../assets/ava.jpg")}
         ></Image>
-        <View style={styles.textInfoContainer}>
-          <Text>Bui Tuan Nam</Text>
-          <Text>@tuannam0612</Text>
-          <Text>Love Coding & Designing!</Text>
+        <View style={styles.qrContainer}>
+        <Text style={{ alignItems: "center", justifyContent: "center", fontSize: 16,fontWeight: "bold", color: "white", paddingTop: 10 }}>@TuanNam0612</Text>
+        <AntDesign name="qrcode" size={24} color="green" style={styles.iconQR} />
         </View>
       </View>
 
@@ -49,6 +49,14 @@ export default function App() {
       <View style={styles.buttonContainer}>
         <Button title="Edit Profile"></Button>
         <FollowButton></FollowButton>
+
+      </View>
+      <View style={styles.userText}>
+      <Text style={{fontSize: 15, color: "white"}}> 
+      ~ Bui Tuan Nam ~{"\n"}
+      StuID: 2101040127
+      </Text>
+       
       </View>
       <View style={styles.profileItem}>
       <ProfileItems />
@@ -116,7 +124,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "black",
+    backgroundColor: "#1B1C21FF",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -134,7 +142,7 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
   },
-  settingImg: {
+  menuHeading: {
     width: 30,
     height: 30,
   },
@@ -158,17 +166,18 @@ const styles = StyleSheet.create({
   statContainer: {
     flex: 1,
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "flex-end",
+    paddingTop: 30
   },
   buttonContainer: {
     flex: 1,
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "flex-end",
     gap: 10,
   },
   galleryContainer: {
-    paddingTop: 100,
-    flex: 5,
+    paddingTop: 0,
+    flex: 3,
   },
   gallery: {
     flexDirection: "row",
@@ -184,8 +193,26 @@ const styles = StyleSheet.create({
   profileItem:{
     flex: 1,
     flexDirection: "row",
+    alignItems: "flex-end",
+    justifyContent: "center",
+    width: "100%",
+  },
+  userText: {
+    alignItems: "flex-end",
+    justifyContent: "center",
+    flexDirection: "row",
+    marginTop: 30
+  },
+  qrContainer:{
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
-  }
+    paddingTop: 5
+
+  },
+  iconQR:{
+    marginTop:10
+  },
+
 });
