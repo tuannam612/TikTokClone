@@ -4,7 +4,7 @@ import React from 'react'
 export default function Logo() {
   return (
     <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
-      <Image source={require('../assets/Tiktok.jpg')} resizeMode='cover' style={styles.image}/>
+      <Image source={require('../assets/Midnight in Cyber Paris_ A Moonlit Eiffel Tower in the Cyberpunk City.jpg')} resizeMode='cover' style={styles.image}/>
     </View>
   )
 }
