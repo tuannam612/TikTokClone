@@ -86,7 +86,7 @@ export default function App() {
           }}
         />
         <Tab.Screen
-          name="Inbox"
+          name="inbox"
           component={InboxStack} // Use InboxStack here
           options={{
             tabBarIcon: ({ focused }) => (
